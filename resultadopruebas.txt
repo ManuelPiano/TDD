@@ -1,0 +1,63 @@
+PHPUnit 10.2.6 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.2.0
+Configuration: C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\phpunit.xml
+
+..E....F..                                                        10 / 10 (100%)
+
+Time: 00:02.357, Memory: 40.00 MB
+
+Example (Tests\Feature\Example)
+ ✔ The application returns a successful response
+
+Example (Tests\Unit\Example)
+ ✔ That true is true
+
+Properties (Tests\Feature\Api\Properties)
+ ✔ Can get all properties
+ ✔ Can store a property
+ ✘ Can update a property
+   │
+   │ Failed asserting that a row in the table [properties] matches the attributes {
+   │     "id": 1,
+   │     "type": "sed",
+   │     "price": 405789,
+   │     "description": "Numquam tempora enim illo dolorum et facilis. In est voluptatibus laboriosam et minima fugit. Quaerat vel quam numquam nobis est. Laborum eveniet qui eos sunt tenetur ratione voluptatem.",
+   │     "created_at": "2023-07-21T21:04:45.000000Z",
+   │     "updated_at": "2023-07-21T21:04:45.000000Z"
+   │ }.
+   │
+   │ Found similar results: [
+   │     {
+   │         "id": 1,
+   │         "type": "sed",
+   │         "price": 405789,
+   │         "description": "Numquam tempora enim illo dolorum et facilis. In est voluptatibus laboriosam et minima fugit. Quaerat vel quam numquam nobis est. Laborum eveniet qui eos sunt tenetur ratione voluptatem.",
+   │         "created_at": "2023-07-21 21:04:45",
+   │         "updated_at": "2023-07-21 21:04:45"
+   │     }
+   │ ].
+   │
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase.php:29
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\tests\Feature\Api\PropertiesTest.php:90
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\vendor\laravel\framework\src\Illuminate\Foundation\Testing\TestCase.php:174
+   │
+ ✔ Can delete a property
+
+Property Request (Tests\Unit\Http\Requests\PropertyRequest)
+ ✔ Type is required
+ ✘ Price is required
+   │
+   │ BadMethodCallException: Call to undefined method App\Models\Property::except()
+   │
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:36
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:2333
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\tests\Unit\Http\Requests\PropertyRequestTest.php:56
+   │ C:\Users\Manuel PC\Downloads\proyecto-tdd\TDD\vendor\laravel\framework\src\Illuminate\Foundation\Testing\TestCase.php:174
+   │
+ ✔ Type must not exceed 20 characters
+ ✔ Price must be an integer
+
+ERRORS!
+Tests: 10, Assertions: 20, Errors: 1, Failures: 1.
